@@ -134,7 +134,7 @@
                                                                         href="#" style="outline:none"
                                                                         tabindex="-1" target="_blank"><img
                                                                             alt="Your logo."
-                                                                            src="{{ asset('assets/images/logo.png') }}"
+                                                                            src="https://instello-luandev.000webhostapp.com/logo.png"
                                                                             style="display: block; height: auto; border: 0; width: 160px; max-width: 100%;"
                                                                             title="Your logo." width="160" /></a></div>
                                                             </td>
@@ -172,7 +172,7 @@
                                                                         href="#" style="outline:none"
                                                                         tabindex="-1" target="_blank"><img
                                                                             alt="Image of lock & key." class="big"
-                                                                            src="{{ asset('assets/imagesEmail/___passwordreset.gif') }}"
+                                                                            src="https://instello-luandev.000webhostapp.com/___passwordreset.gif"
                                                                             style="display: block; height: auto; border: 0; width: 640px; max-width: 100%;"
                                                                             title="Image of lock & key."
                                                                             width="640" /></a></div>
@@ -252,7 +252,7 @@
                                                                 style="padding-left:10px;padding-right:10px;padding-top:15px;text-align:center;">
                                                                 <div align="center">
                                                                     <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:62px;width:210px;v-text-anchor:middle;" arcsize="57%" stroke="false" fillcolor="#f7a50c"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px"><![endif]--><a
-                                                                        href="{{ route('user.reset', $token) }}"
+                                                                        href="{{ route('user.reset', ['token' => $token]) }}"
                                                                         style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#ec4899;border-radius:35px;width:auto;border-top:1px solid #ec4899;border-right:1px solid #ec4899;border-bottom:1px solid #ec4899;border-left:1px solid #ec4899;padding-top:15px;padding-bottom:15px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;"
                                                                         target="_blank"><span
                                                                             style="padding-left:30px;padding-right:30px;font-size:16px;display:inline-block;letter-spacing:normal;"><span
@@ -316,7 +316,7 @@
                                                                         href="#" style="outline:none"
                                                                         tabindex="-1" target="_blank"><img
                                                                             alt="Your logo. "
-                                                                            src="{{ asset('assets/images/logo-light.png') }}"
+                                                                            src="https://instello-luandev.000webhostapp.com/logo-light.png"
                                                                             style="display: block; height: auto; border: 0; width: 416px; max-width: 100%;"
                                                                             title="Your logo. " width="416" /></a></div>
                                                             </td>
@@ -339,7 +339,7 @@
                                                                                 href="https://www.facebook.com/"
                                                                                 target="_blank"><img alt="Facebook"
                                                                                     height="32"
-                                                                                    src="{{ asset('assets/imagesEmail/facebook2x.png') }}"
+                                                                                    src="https://instello-luandev.000webhostapp.com/facebook2x.png"
                                                                                     style="display: block; height: auto; border: 0;"
                                                                                     title="Facebook" width="32" /></a>
                                                                         </td>
@@ -347,7 +347,7 @@
                                                                                 href="https://twitter.com/"
                                                                                 target="_blank"><img alt="Twitter"
                                                                                     height="32"
-                                                                                    src="{{ asset('assets/imagesEmail/twitter2x.png') }}"
+                                                                                    src="https://instello-luandev.000webhostapp.com/twitter2x.png"
                                                                                     style="display: block; height: auto; border: 0;"
                                                                                     title="Twitter" width="32" /></a>
                                                                         </td>
@@ -355,7 +355,7 @@
                                                                                 href="https://instagram.com/"
                                                                                 target="_blank"><img alt="Instagram"
                                                                                     height="32"
-                                                                                    src="{{ asset('assets/imagesEmail/instagram2x.png') }}"
+                                                                                    src="https://instello-luandev.000webhostapp.com/instagram2x.png"
                                                                                     style="display: block; height: auto; border: 0;"
                                                                                     title="Instagram" width="32" /></a>
                                                                         </td>
@@ -363,7 +363,7 @@
                                                                                 href="https://www.linkedin.com/"
                                                                                 target="_blank"><img alt="LinkedIn"
                                                                                     height="32"
-                                                                                    src="{{ asset('assets/imagesEmail/linkedin2x.png') }}"
+                                                                                    src="https://instello-luandev.000webhostapp.com/linkedin2x.png"
                                                                                     style="display: block; height: auto; border: 0;"
                                                                                     title="LinkedIn" width="32" /></a>
                                                                         </td>

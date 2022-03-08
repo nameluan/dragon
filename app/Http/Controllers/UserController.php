@@ -128,7 +128,7 @@ class UserController extends Controller
             ]);
             if ($validator->fails())
             {
-                return response()->json($validator->errors(),422);
+                return response()->json(['error'=>$validator->errors()->all()]);
 
             }else{
                 $token = Str::random(64);
@@ -138,7 +138,6 @@ class UserController extends Controller
                     'token' => $token,
                     'created_at' => Carbon::now()
                 ]);
-
                 Mail::send('email.forgotPassword', ['token' => $token], function($message) use($request){
                     $message->to($request->email);
                     $message->subject('Reset Password');

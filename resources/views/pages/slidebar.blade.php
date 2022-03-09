@@ -1,6 +1,6 @@
 <div class="sidebar">
     <div class="sidebar_header border-b border-gray-200 from-gray-100 to-gray-50 bg-gradient-to-t  uk-visible@s">
-        <a href="#">
+        <a href="{{ route('home') }}">
             <img src="{{ asset('assets/images/logo.png') }}">
             <img src="{{ asset('assets/images/logo-light.png') }}" class="logo_inverse">
         </a>

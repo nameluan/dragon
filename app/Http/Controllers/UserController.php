@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -89,7 +90,8 @@ class UserController extends Controller
 
             } else {
                 $User = new User;
-                $User->id = Str::uuid();
+                $idUser = Str::uuid();
+                $User->id = $idUser;
                 $User->role_id = '1';
                 $User->firstName = $request->firstName;
                 $User->lastName = $request->lastName;
@@ -106,6 +108,11 @@ class UserController extends Controller
                 }
 
                 $User->save();
+
+                $setting = new Setting;
+                $setting->user_id = $idUser;
+                $setting->display = "light";
+                $setting->save();
 
                 return response()->json(
                     [
@@ -138,19 +145,19 @@ class UserController extends Controller
                     'token' => $token,
                     'created_at' => Carbon::now()
                 ]);
+
                 Mail::send('email.forgotPassword', ['token' => $token], function($message) use($request){
                     $message->to($request->email);
                     $message->subject('Reset Password');
                 });
+
+                return response()->json(
+                    [
+                        "status"=>true,
+                        "msg"=>"We have e-mailed your password reset link!",
+                    ]
+                );
             }
-
-
-            return response()->json(
-                [
-                    "status"=>true,
-                    "msg"=>"We have e-mailed your password reset link!",
-                ]
-            );
         }
     }
     public function reset (Request $request, $token){
@@ -158,35 +165,48 @@ class UserController extends Controller
             return view('user.reset', ['token' => $token]);
         }
         if ($request->isMethod('post')) {
-            $request->validate([
+            $validator = Validator::make($request->all(), [
                 'email' => 'required|email|exists:users',
                 'password' => 'required|string|min:6|confirmed',
                 'password_confirmation' => 'required'
             ]);
+            if ($validator->fails())
+            {
+                return response()->json(['error'=>$validator->errors()->all()]);
 
-            $updatePassword = DB::table('password_resets')
-                                ->where([
-                                  'email' => $request->email,
-                                  'token' => $request->token
-                                ])
-                                ->first();
+            }else{
+                $updatePassword = DB::table('password_resets')
+                                    ->where([
+                                    'email' => $request->email,
+                                    'token' => $request->token
+                                    ])
+                                    ->first();
 
-            if(!$updatePassword){
-                return back()->withInput()->with('error', 'Invalid token!');
+                if(!$updatePassword){
+                    return back()->withInput()->with('error', 'Invalid token!');
+                }
+
+                $user = User::where('email', $request->email)
+                            ->update(['password' => bcrypt($request->password)]);
+
+                DB::table('password_resets')->where(['email'=> $request->email])->delete();
+
+                return response()->json(
+                    [
+                        "status"=>true,
+                        "msg"=>"You have successfully registered, Login to access your dashboard",
+                        "redirect_location"=>url("user/login")
+                    ]
+                );
             }
-
-            $user = User::where('email', $request->email)
-                        ->update(['password' => bcrypt($request->password)]);
-
-            DB::table('password_resets')->where(['email'=> $request->email])->delete();
-
-            return redirect('user/login')->with('message', 'Your password has been changed!');
         }
     }
-
     public function logout(Request $request)
     {
         Auth::logout();
         return redirect()->route('user.login');
+    }
+    public function friend(){
+        return view('user.profile-friend');
     }
 }

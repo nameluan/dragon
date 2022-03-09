@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="@foreach ($display as $ds )
+{{$ds->display;}}
+@endforeach">
 
 
 
@@ -26,7 +28,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/uikit.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/tailwind.css') }}">
-
+    @yield('css')
 </head>
 
 <body>
@@ -40,20 +42,7 @@
 
             @include('pages.header')
 
-            <div class="container m-auto">
-
-                <h1 class="lg:text-2xl text-lg font-extrabold leading-none text-gray-900 tracking-tight mb-5"> Feed </h1>
-
-                <div class="lg:flex justify-center lg:space-x-10 lg:space-y-0 space-y-5">
-
-                    @include('pages.left-slidebar')
-
-                    @include('pages.right-slidebar')
-
-                </div>
-
-
-            </div>
+            @yield('content')
 
         </div>
 
@@ -152,7 +141,6 @@
 
 
     @include('pages.themes')
-
  <!-- Scripts
     ================================================== -->
     <script src="{{ asset('assets/js/tippy.all.min.js') }}"></script>

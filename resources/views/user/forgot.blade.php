@@ -16,8 +16,6 @@
 @endsection
 @section('script')
 <script>
-    var typingTimer;
-
     $(document).ready(function () {
         $.ajaxSetup({
             headers: {
@@ -25,8 +23,8 @@
             }
         });
 
-        $(document).on('submit', '#userForgot', function () {
-            var e = this;
+        $(document).on('submit', '#userForgot', function (e) {
+            e.preventDefault();
             $(this).find("[type='submit']").html("Forgot Password...");
             $.ajax({
                 type: 'POST',
@@ -40,11 +38,7 @@
                         swal("Check email", data.msg, "warning");
                     }else{
                         $(".alert").remove();
-                        var erroJson = JSON.parse(data.responseText);
-                        for (var err in erroJson) {
-                            for (var errstr of erroJson[err])
-                                $("[name='" + err + "']").after("<div class='alert alert-danger'>" + errstr + "</div>");
-                        }
+                        $("[name='email']").after("<div class='alert alert-danger text-danger' style='color:#d12b2b'>" + data.error + "</div>");
                     }
                 }
             });

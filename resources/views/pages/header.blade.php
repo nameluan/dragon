@@ -3,7 +3,7 @@
         <div class="left-side">
             <!-- Logo -->
             <div id="logo" class=" uk-hidden@s">
-                <a href="home.html">
+                <a href="{{ route('home') }}">
                     <img src="{{ asset('assets/images/logo-mobile.png') }}" alt="">
                     <img src="{{ asset('assets/images/logo-mobile-light.png') }}" class="logo_inverse">
                 </a>

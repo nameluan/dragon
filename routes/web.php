@@ -21,6 +21,9 @@ Route::prefix('user')->group(function () {
     Route::match(['get', 'post'], 'login', [UserController::class, 'login'])->name('user.login');
     Route::match(['get', 'post'], 'register', [UserController::class, 'register'])->name('user.register');
     Route::match(['get', 'post'], 'forgot', [UserController::class, 'forgot'])->name('user.forgot');
-    Route::match(['get', 'post'], 'reset', [UserController::class, 'reset'])->name('user.reset');
-    Route::get('logout', [UserController::class, 'logout'])->name('user.logout');
-});//middleware(['auth', 'second'])->
+    Route::match(['get', 'post'], 'reset/{token}', [UserController::class, 'reset'])->name('user.reset');
+    Route::middleware('checklogin')->group(function () {
+        Route::get('logout', [UserController::class, 'logout'])->name('user.logout');
+        Route::get('friend', [UserController::class, 'friend'])->name('user.friend');
+    });
+});

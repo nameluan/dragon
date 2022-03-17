@@ -104,7 +104,7 @@ class UserController extends Controller
                 if (isset($request->avatarString)) {
                     $User->avatarString = $request->avatarString;
                 } else {
-                    $User->avatarString = 'avt.png';
+                    $User->avatarString = 'no-avt.png';
                 }
 
                 $User->save();

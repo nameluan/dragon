@@ -15,8 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->middleware('checklogin')->name('home');
+Route::middleware('checklogin')->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/explore', [HomeController::class, 'explore'])->name('explore');
+    Route::get('/messages', [HomeController::class, 'messages'])->name('messages');
+    Route::get('/market', [HomeController::class, 'market'])->name('market');
+    Route::get('/trending', [HomeController::class, 'trending'])->name('trending');
+    Route::get('/setting', [HomeController::class, 'setting'])->name('setting');
+    Route::get('/postDisplay', [HomeController::class, 'display'])->name('postDisplay');
 
+});
 Route::prefix('user')->group(function () {
     Route::match(['get', 'post'], 'login', [UserController::class, 'login'])->name('user.login');
     Route::match(['get', 'post'], 'register', [UserController::class, 'register'])->name('user.register');

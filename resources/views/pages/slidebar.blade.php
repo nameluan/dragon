@@ -5,7 +5,7 @@
             <img src="{{ asset('assets/images/logo-light.png') }}" class="logo_inverse">
         </a>
         <!-- btn night mode -->
-        <a href="#" id="night-mode" class="btn-night-mode" data-tippy-placement="left" title="Switch to dark mode"></a>
+        <a href="{{ route('postDisplay') }}" id="night-mode" class="btn-night-mode" data-tippy-placement="left" title="Switch to dark mode"></a>
     </div>
     <div class="border-b border-gray-20 flex justify-between items-center p-3 pl-5 relative uk-hidden@s">
         <h3 class="text-xl"> Navigation </h3>
@@ -15,8 +15,8 @@
         @include('pages.profile')
         <hr class="-mx-4 -mt-1 uk-visible@s">
         <ul>
-            <li class="active">
-                <a href="feed.html">
+            <li class="{{ Request::is('/') ? "active" : "" }}">
+                <a href="{{ route('home') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -24,8 +24,8 @@
                     </svg>
                     <span> Feed </span> </a>
             </li>
-            <li>
-                <a href="explore.html">
+            <li class="{{ Request::is('explore') ? "active" : "" }}">
+                <a href="{{ route('explore') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -33,13 +33,8 @@
                     </svg>
                     <span> Explore </span> </a>
             </li>
-            <li>
-                <a href="chat.html">
-                    <i class="uil-location-arrow"></i>
-                    <span> Messages </span> <span class="nav-tag"> 3</span> </a>
-            </li>
-            <li>
-                <a href="trending.html">
+            <li class="{{ Request::is('trending') ? "active" : "" }}">
+                <a href="{{ route('trending') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -49,13 +44,13 @@
                     </svg>
                     <span> Trending </span> </a>
             </li>
-            <li>
-                <a href="market.html">
+            <li class="{{ Request::is('market') ? "active" : "" }}">
+                <a href="{{ route('market') }}">
                     <i class="uil-store"></i>
                     <span> Marketplace </span> </a>
             </li>
             <li>
-                <a href="setting.html">
+                <a class="{{ Request::is('setting') ? "active" : "" }}" href="{{ route('setting') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -66,9 +61,9 @@
                     <span> Settings </span>
                 </a>
                 <ul>
-                    <li><a href="setting.html">General </a></li>
-                    <li><a href="setting.html"> Account setting </a></li>
-                    <li><a href="setting.html">Billing <span class="nav-tag">3</span> </a></li>
+                    <li><a href="{{ route('setting') }}">General </a></li>
+                    <li><a href="{{ route('setting') }}"> Account setting </a></li>
+                    <li><a href="{{ route('setting') }}">Billing <span class="nav-tag">3</span> </a></li>
                 </ul>
             </li>
             <li>
@@ -80,18 +75,22 @@
                     </svg>
                     <span> My Profile </span> </a>
             </li>
-            <li>
-                <hr class="my-2">
-            </li>
-            <li>
-                <a href="form-login.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                    </svg>
-                    <span> Logout </span> </a>
-            </li>
         </ul>
     </div>
 </div>
+@section('script')
+<script>
+    $(document).ready(function() {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $(document).on('click', '.btn-night-mode',function(e){
+        console.log("okeiR");
+    });
+
+});
+</script>
+@endsection

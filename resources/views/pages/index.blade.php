@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="@foreach ($display as $ds )
-{{$ds->display;}}
-@endforeach">
+<html lang="en" class="{{Auth::check() ? $display->display : ""}}">
 
 
 
@@ -14,7 +12,7 @@
 
     <!-- Basic Page Needs
         ================================================== -->
-    <title>Instello Sharing Photos</title>
+    <title>@yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Instello - Sharing Photos platform HTML Template">
@@ -148,7 +146,7 @@
     <script src="{{ asset('assets/js/uikit.js') }}"></script>
     <script src="{{ asset('assets/js/simplebar.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-
+    @yield('script')
 
     {{-- <script src="../../unpkg.com/ionicons%405.2.3/dist/ionicons.js"></script> --}}
 </body>

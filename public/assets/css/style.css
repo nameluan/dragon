@@ -9,7 +9,7 @@
 /* -------------------------------------------------------------- */
 /* Table of Contents
  -----------------------------------------------------------------
- 
+
    #Dark
    #button
    #input
@@ -25,40 +25,64 @@
    #main_content
    #market
    #group-catagroy-card
-   #story-moda    
+   #story-moda
 
    *************/
- 
+
 
 /* -------------------------------------------------------------- */
 /* Import font
 ----------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap");
- 
+
 
 /* -------------------------------------------------------------- */
 /* 04. Dark mode
 ----------------------------------------------------------------- */
 /* transparent */
+.dark .dark-text{
+    color: #186ebe !important;
+}
+.dark .dark-a{
+    border:solid 1px #186ebe !important;
+}
+.dark .dark-i{
+    color:#186ebe;
+}
+.dark .dark-i:hover{
+    color:#186ebe;
+}
+.dark .dark-time{
+    color: black !important;
+}
+.dark .dark-a:hover{
+    color: #fff !important;
+}
+.dark .dark-refresh:hover{
+    color: #186ebe !important;
+}
+.dark .dark-lcs:hover{
+    color: #186ebe !important;
+}
 .dark .header_dropdown.profile_dropdown ul a:hover {
   background-color: transparent;
 }
 
 /* level 1 */
 .dark body, .dark .main_content, .dark .dark-tabs {
-  background-color: #08090f !important;
+  background-color: #343f58 !important;
 }
 
 /* level 2 */
 .dark header, .dark .sidebar,
 .dark .mdropdown, .dark .xdropdown,
 .dark .header_dropdown {
-  background-color: #111827;
+  background-color: #343f58;
 }
 
 /* level 2 */
 .dark .header_dropdown .bg-gradient-to-t, .dark .dark-tabs a , .dark .sidebar_header {
-  background: #1f2937 !important;
+  background: #186ebe !important;
 }
 
 /* level 4 */
@@ -94,7 +118,7 @@
 
 /* sidebar link active */
 .dark .sidebar .sidebar_inner ul li.active a {
-  color: #be185d !important;
+  color: #186ebe !important;
 }
 
 /* change default logo */
@@ -117,7 +141,7 @@ button {
 }
 
 span.button, button.button {
-  background-color: #be185d;
+  background-color: #186ebe;
   top: 0;
   color: #fff;
   position: relative;
@@ -138,7 +162,7 @@ span.button, button.button {
 }
 
 input[type="button"], input[type="submit"] {
-  background-color: #be185d;
+  background-color: #186ebe;
   top: 0;
   padding: 10px 20px;
   line-height: 24px;
@@ -158,7 +182,7 @@ input[type="button"], input[type="submit"] {
 }
 
 a.button {
-  background-color: #be185d;
+  background-color: #186ebe;
   top: 0;
   padding: 8px 18px;
   line-height: 22px;
@@ -849,7 +873,7 @@ button {
 }
 
 a {
-  color: #be185d;
+  color: #186ebe;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   outline: none !important;
@@ -942,7 +966,7 @@ img {
 
 .keyword {
   background-color: rgba(190, 24, 93, 0.07);
-  color: #be185d;
+  color: #186ebe;
   display: inline-block;
   float: left;
   padding: 0;
@@ -1057,7 +1081,7 @@ img {
   width: 36px;
   padding: 0;
   color: #fff;
-  background-color: #be185d;
+  background-color: #186ebe;
   border-radius: 4px;
   margin: 6px;
   font-size: 19px;
@@ -1139,8 +1163,8 @@ input.keyword-input {
 }
 
 .checkbox input:checked + label span.checkbox-icon {
-  border-color: #be185d;
-  background-color: #be185d;
+  border-color: #186ebe;
+  background-color: #186ebe;
 }
 
 .checkbox input:checked + label span.checkbox-icon:after {
@@ -1195,7 +1219,7 @@ input.keyword-input {
 }
 
 .radio input[type="radio"] + label .radio-label:after {
-  background-color: #be185d;
+  background-color: #186ebe;
   content: "";
   top: 3px;
   left: 0;
@@ -1219,8 +1243,8 @@ input.keyword-input {
 }
 
 .radio input[type="radio"]:checked + label .radio-label {
-  background-color: #be185d;
-  border-color: #be185d;
+  background-color: #186ebe;
+  border-color: #186ebe;
   -webkit-box-shadow: inset 0 0 0 3px #fff;
           box-shadow: inset 0 0 0 3px #fff;
 }
@@ -1376,8 +1400,8 @@ label.switch {
 
 @-webkit-keyframes switch-shadow-color {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(190, 24, 93, 0.6);
-            box-shadow: 0 0 0 0 rgba(190, 24, 93, 0.6);
+    -webkit-box-shadow: 0 0 0 0 #186ebe;
+            box-shadow: 0 0 0 0 #186ebe;
   }
   100% {
     -webkit-box-shadow: 0 0 0px 10px rgba(0, 0, 0, 0);
@@ -1387,8 +1411,8 @@ label.switch {
 
 @keyframes switch-shadow-color {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(190, 24, 93, 0.6);
-            box-shadow: 0 0 0 0 rgba(190, 24, 93, 0.6);
+    -webkit-box-shadow: 0 0 0 0 #186ebe;
+            box-shadow: 0 0 0 0 #186ebe;
   }
   100% {
     -webkit-box-shadow: 0 0 0px 10px rgba(0, 0, 0, 0);
@@ -1412,7 +1436,7 @@ label.switch {
 }
 
 input:checked + .switch-button {
-  background-color: #be185d;
+  background-color: #186ebe;
 }
 
 input:checked + .switch-button:before {
@@ -1620,7 +1644,7 @@ strong {
 }
 
 /* ---------------------------------- */
-/*  Simplebar  
+/*  Simplebar
 /* ---------------------------------- */
 [data-simplebar] {
   position: relative;
@@ -2065,7 +2089,7 @@ header .header_inner .right-side .header-avatar {
 }
 
 .header_dropdown.profile_dropdown ul a:hover {
-  color: #be185d;
+  color: #186ebe;
   background-color: transparent;
 }
 
@@ -2210,7 +2234,7 @@ header .uk-dropdown {
 }
 
 .sidebar .sidebar_header img {
-  max-width: 110px;
+  max-width: 235px;
 }
 
 .sidebar .sidebar_header img.logo-icon {
@@ -2241,7 +2265,7 @@ header .uk-dropdown {
   padding: 0 20px;
   margin-bottom: 5px;
   display: block;
-  color: #be185d;
+  color: #186ebe;
   font-weight: 600;
   font-size: 14px;
 }
@@ -2293,13 +2317,13 @@ header .uk-dropdown {
 .sidebar .sidebar_inner ul li.active-submenu a i,
 .sidebar .sidebar_inner ul li.active a i,
 .sidebar .sidebar_inner ul li:hover a i {
-  color: #be185d;
+  color: #186ebe;
 }
 
 .sidebar .sidebar_inner ul li.active-submenu a,
 .sidebar .sidebar_inner ul li:hover a,
 .sidebar .sidebar_inner ul li.active a {
-  color: #be185d;
+  color: #186ebe;
 }
 
 .sidebar .sidebar_inner ul li span.nav-tag {
@@ -2311,7 +2335,7 @@ header .uk-dropdown {
   text-align: center;
   color: #fff;
   font-size: 11px;
-  background-color: #be185d;
+  background-color: #186ebe;
   border-radius: 50%;
   position: relative;
   margin: 0 0 0 4px;
@@ -2764,7 +2788,7 @@ header .uk-dropdown {
 }
 
 /* ---------------------------------- */
-/* catagroy  card   
+/* catagroy  card
 ------------------------------------- */
 .group-catagroy-card {
   /* background-color: #ffffff; */
@@ -2848,4 +2872,3 @@ header .uk-dropdown {
     position: absolute;
   }
 }
- 

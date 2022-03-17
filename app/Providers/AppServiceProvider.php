@@ -25,11 +25,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('pages.index', function ($view) {
+        view()->composer('*', function ($view) {
             if (Auth::check()) {
-                $display = Setting::where('user_id',Auth::user()->id);
+                $display = Setting::where('user_id','=',Auth::user()->id)->first();
+                $view->with('display', $display);
             }
-            $view->with('display', $display);
         });
     }
 }

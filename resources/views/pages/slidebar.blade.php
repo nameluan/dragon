@@ -67,7 +67,7 @@
                 </ul>
             </li>
             <li>
-                <a href="profile.html">
+                <a href="{{ route('user.friend') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -79,18 +79,5 @@
     </div>
 </div>
 @section('script')
-<script>
-    $(document).ready(function() {
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
 
-    $(document).on('click', '.btn-night-mode',function(e){
-        console.log("okeiR");
-    });
-
-});
-</script>
 @endsection

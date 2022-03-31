@@ -14,7 +14,7 @@
             </div>
 
             <div class="header_search">
-                <input type="text" placeholder="Search..">
+                <input type="text" class="" placeholder="Search..">
                 <div class="icon-search">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">

@@ -111,7 +111,7 @@ class UserController extends Controller
 
                 $setting = new Setting;
                 $setting->user_id = $idUser;
-                $setting->display = "light";
+                $setting->display = "";
                 $setting->save();
 
                 return response()->json(

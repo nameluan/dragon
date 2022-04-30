@@ -6,6 +6,20 @@
         var nightMode = localStorage.getItem('gmtNightMode');
         if (nightMode) {
             document.documentElement.className += ' dark';
+            function load_themes(){
+                $.ajax({
+                    url : "/",
+                    type : "post",
+                    dataType:"text",
+                    data : {
+                        user_id : Auth::user()->id;
+                        display : "dark",
+                    },
+                    success : function (result){
+                        $('#result').html(result);
+                    }
+                });
+            }
         }
     })(window, document);
 

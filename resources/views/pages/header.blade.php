@@ -10,7 +10,7 @@
             </div>
 
             <div class="triger" uk-toggle="target: #wrapper ; cls: sidebar-active">
-                <i class="uil-bars"></i>
+                <i class="uil-bars" onclick="load_themes()" ></i>
             </div>
 
             <div class="header_search">

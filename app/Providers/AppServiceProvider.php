@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('*', function ($view) {
+        view()->composer('pages.index', function ($view) {
             if (Auth::check()) {
                 $display = Setting::where('user_id','=',Auth::user()->id)->first();
                 $view->with('display', $display);

@@ -134,7 +134,7 @@
                                                                         href="#" style="outline:none"
                                                                         tabindex="-1" target="_blank"><img
                                                                             alt="Your logo."
-                                                                            src="https://instello-luandev.000webhostapp.com/logo.png"
+                                                                            src="{{ asset('assets/imageEmail/logo.png') }}"
                                                                             style="display: block; height: auto; border: 0; width: 160px; max-width: 100%;"
                                                                             title="Your logo." width="160" /></a></div>
                                                             </td>
@@ -172,7 +172,7 @@
                                                                         href="#" style="outline:none"
                                                                         tabindex="-1" target="_blank"><img
                                                                             alt="Image of lock & key." class="big"
-                                                                            src="https://instello-luandev.000webhostapp.com/___passwordreset.gif"
+                                                                            src="{{ asset('assets/imageEmail/___passwordreset.gif') }}"
                                                                             style="display: block; height: auto; border: 0; width: 640px; max-width: 100%;"
                                                                             title="Image of lock & key."
                                                                             width="640" /></a></div>
@@ -316,7 +316,7 @@
                                                                         href="#" style="outline:none"
                                                                         tabindex="-1" target="_blank"><img
                                                                             alt="Your logo. "
-                                                                            src="https://instello-luandev.000webhostapp.com/logo-light.png"
+                                                                            src="{{ asset('assets/imageEmail/logo-light.png') }}"
                                                                             style="display: block; height: auto; border: 0; width: 416px; max-width: 100%;"
                                                                             title="Your logo. " width="416" /></a></div>
                                                             </td>
@@ -339,7 +339,7 @@
                                                                                 href="https://www.facebook.com/"
                                                                                 target="_blank"><img alt="Facebook"
                                                                                     height="32"
-                                                                                    src="https://instello-luandev.000webhostapp.com/facebook2x.png"
+                                                                                    src="{{ asset('assets/imageEmail/facebook2x.png') }}"
                                                                                     style="display: block; height: auto; border: 0;"
                                                                                     title="Facebook" width="32" /></a>
                                                                         </td>
@@ -347,7 +347,7 @@
                                                                                 href="https://twitter.com/"
                                                                                 target="_blank"><img alt="Twitter"
                                                                                     height="32"
-                                                                                    src="https://instello-luandev.000webhostapp.com/twitter2x.png"
+                                                                                    src="{{ asset('assets/imageEmail/twitter2x.png') }}"
                                                                                     style="display: block; height: auto; border: 0;"
                                                                                     title="Twitter" width="32" /></a>
                                                                         </td>
@@ -355,7 +355,7 @@
                                                                                 href="https://instagram.com/"
                                                                                 target="_blank"><img alt="Instagram"
                                                                                     height="32"
-                                                                                    src="https://instello-luandev.000webhostapp.com/instagram2x.png"
+                                                                                    src="{{ asset('assets/imageEmail/instagram2x.png') }}"
                                                                                     style="display: block; height: auto; border: 0;"
                                                                                     title="Instagram" width="32" /></a>
                                                                         </td>
@@ -363,7 +363,7 @@
                                                                                 href="https://www.linkedin.com/"
                                                                                 target="_blank"><img alt="LinkedIn"
                                                                                     height="32"
-                                                                                    src="https://instello-luandev.000webhostapp.com/linkedin2x.png"
+                                                                                    src="{{ asset('assets/imageEmail/linkedin2x.png') }}"
                                                                                     style="display: block; height: auto; border: 0;"
                                                                                     title="LinkedIn" width="32" /></a>
                                                                         </td>

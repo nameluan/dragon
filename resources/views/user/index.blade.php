@@ -13,7 +13,7 @@
 
     <!-- Basic Page Needs
     ================================================== -->
-    <title>Instello Sharing Photos</title>
+    <title>Dragon | @yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Instello - Sharing Photos platform HTML Template">
@@ -49,8 +49,8 @@
                     </a>
 
                     <div class="capitalize flex font-semibold hidden lg:block my-2 space-x-3 text-center text-sm">
-                        <a href="{{ route('user.login') }}" class="{{ Request::is('user/login') ? 'py-3 px-4' : 'bg-pink-500 pink-500 px-6 py-3 rounded-md shadow text-white' }}">Login</a>
-                        <a href="{{ route('user.register') }}" class="{{ Request::is('user/register') ? 'py-3 px-4' : 'bg-pink-500 pink-500 px-6 py-3 rounded-md shadow text-white' }}">Register</a>
+                        <a href="{{ route('user.login') }}" class="{{ Request::is('user/login') ? 'py-3 px-4' : 'bg-blue-400 blue-400 px-6 py-3 rounded-md shadow text-white' }}">Login</a>
+                        <a href="{{ route('user.register') }}" class="{{ Request::is('user/register') ? 'py-3 px-4' : 'bg-blue-400 blue-400 px-6 py-3 rounded-md shadow text-white' }}">Register</a>
                     </div>
 
                 </div>

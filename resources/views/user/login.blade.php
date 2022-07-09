@@ -1,4 +1,7 @@
 @extends('user.index')
+@section('title')
+Login
+@endsection
 @section('content')
 <div class="lg:p-12 max-w-md max-w-xl lg:my-0 my-12 mx-auto p-6 space-y-">
     <h1 class="lg:text-3xl text-xl font-semibold  mb-6"> Log in</h1>
@@ -18,7 +21,7 @@
             <a href="{{ route('user.forgot') }}"> Forgot Your Password? </a>
         </div>
         <button type="submit"
-            class="bg-gradient-to-br from-pink-500 py-3 rounded-md text-white text-xl to-red-400 w-full">Login</button>
+            class="bg-gradient-to-br from-blue-500 py-3 rounded-md text-white text-xl to-blue-600 w-full">Login</button>
         <div class="text-center mt-5 space-x-2">
             <p class="text-base"> Not registered? <a href="{{ route('user.register') }}" class=""> Create a account </a>
             </p>

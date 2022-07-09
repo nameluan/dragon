@@ -1,4 +1,7 @@
 @extends('pages.index')
+@section('title')
+Profile
+@endsection
 @section('css')
 <style>
     @media (min-width: 1024px) {

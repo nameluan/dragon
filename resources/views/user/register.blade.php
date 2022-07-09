@@ -1,4 +1,7 @@
 @extends('user.index')
+@section('title')
+Register
+@endsection
 @section('content')
 <div class="lg:p-12 max-w-md max-w-xl lg:my-0 my-12 mx-auto p-6 space-y-">
     <h1 class="lg:text-3xl text-xl font-semibold mb-6"> Sign in</h1>
@@ -26,7 +29,7 @@
             <a href="#"> Terms and Conditions</a>
         </div>
         <button type="submit"
-            class="bg-gradient-to-br from-pink-500 py-3 rounded-md text-white text-xl to-red-400 w-full">REGISTER</button>
+            class="bg-gradient-to-br from-blue-500 py-3 rounded-md text-white text-xl to-blue-600 w-full">REGISTER</button>
         <div class="text-center mt-5 space-x-2">
             <p class="text-base"> Do you have an account? <a href="{{ route('user.login') }}"> Login </a></p>
         </div>
@@ -54,8 +57,8 @@
                 for (var err in erroJson) {
                     for (var errstr of erroJson[err])
                         $("[name='" + err + "']").after("<div class='alert alert-danger'>" + errstr + "</div>");
-                }
-
+                        $(e).find("[type='submit']").html("REGISTER");
+                    }
             });
             return false;
         });

@@ -23,7 +23,7 @@ Dragon
                                     class="bg-gray-200 border border-white rounded-full w-8 h-8">
                             </div>
                         </a>
-                        <span class="block capitalize font-semibold dark:text-gray-100"> Johnson smith </span>
+                        <span class="block capitalize font-semibold dark:text-gray-100"> no name </span>
                     </div>
                     <div>
                         <a href="#"> <i
@@ -73,9 +73,15 @@ Dragon
                 </div>
 
                 <div uk-lightbox>
-                    <a href="{{ asset('assets/images/post/img4.jpg') }}">
-                        <img src="{{ asset('assets/images/post/img4.jpg') }}" alt="">
-                    </a>
+                    <div class="py-3 px-4 space-y-3">
+                        12 thg 11, 2021 — Tưởng chừng văn mẫu sẽ không còn đất dụng võ ở các khối lớp lớn cấp hai, cấp ba, nhưng chúng vẫn chi phối rất nhiều khi học sinh học thuộc những
+                        Kho văn mẫu, kiên thức ngữ văn trung học cơ sở ( văn mẫu lớp 6 7 8 9 ), trung học phổ thông ( lớp 10 11 12 ) phục vụ cho việc học tập và giảng dạy.
+                    </div>
+                    <div class="grid grid-cols-12">
+                        <a href="{{ asset('assets/images/post/img4.jpg') }}">
+                            <img src="https://static.remove.bg/remove-bg-web/5c20d2ecc9ddb1b6c85540a333ec65e2c616dbbd/assets/start-1abfb4fe2980eabfbbaaa4365a0692539f7cd2725f324f904565a9a744f8e214.jpg" alt="">
+                        </a>
+                    </div>
                 </div>
 
 
@@ -701,8 +707,8 @@ Dragon
                                     class="bg-gray-200 rounded-full w-10 h-10">
                             </a>
                             <div class="flex flex-col">
-                                <span class="block capitalize font-semibold"> Johnson smith </span>
-                                <span class="block capitalize text-sm"> Australia </span>
+                                <span class="block capitalize font-semibold"> Smile</span>
+                                <span class="block capitalize text-sm"> VN </span>
                             </div>
                         </div>
 
@@ -710,53 +716,6 @@ Dragon
                             class="border border-gray-200 font-semibold px-4 py-1 rounded-full hover:bg-blue-600 hover:text-white hover:border-blue-600 dark:border-gray-800 dark-text dark-a">
                             Follow </a>
                     </div>
-                    <div class="flex items-center justify-between py-3">
-                        <div class="flex flex-1 items-center space-x-4">
-                            <a href="profile.html">
-                                <img src="{{ asset('assets/images/avatars/avatar-1.jpg') }}"
-                                    class="bg-gray-200 rounded-full w-10 h-10">
-                            </a>
-                            <div class="flex flex-col">
-                                <span class="block capitalize font-semibold"> James Lewis </span>
-                                <span class="block capitalize text-sm"> Istanbul </span>
-                            </div>
-                        </div>
-                        <a href="#"
-                            class="border border-gray-200 font-semibold px-4 py-1 rounded-full hover:bg-pink-600 hover:text-white hover:border-pink-600 dark:border-gray-800">
-                            Follow </a>
-                    </div>
-                    <div class="flex items-center justify-between py-3">
-                        <div class="flex flex-1 items-center space-x-4">
-                            <a href="profile.html">
-                                <img src="{{ asset('assets/images/avatars/avatar-5.jpg') }}"
-                                    class="bg-gray-200 rounded-full w-10 h-10">
-                            </a>
-                            <div class="flex flex-col">
-                                <span class="block capitalize font-semibold"> John Michael </span>
-                                <span class="block capitalize text-sm"> New York </span>
-                            </div>
-                        </div>
-                        <a href="#"
-                            class="border border-gray-200 font-semibold px-4 py-1 rounded-full hover:bg-pink-600 hover:text-white hover:border-pink-600 dark:border-gray-800">
-                            Follow </a>
-                    </div>
-                    <div class="flex items-center justify-between py-3">
-                        <div class="flex flex-1 items-center space-x-4">
-                            <a href="profile.html">
-                                <img src="{{ asset('assets/images/avatars/avatar-7.jpg') }}"
-                                    class="bg-gray-200 rounded-full w-10 h-10">
-                            </a>
-                            <div class="flex flex-col">
-                                <span class="block capitalize font-semibold"> Monroe Parker </span>
-                                <span class="block capitalize text-sm"> Yeman </span>
-                            </div>
-                        </div>
-
-                        <a href="#"
-                            class="border border-gray-200 font-semibold px-4 py-1 rounded-full hover:bg-pink-600 hover:text-white hover:border-pink-600 dark:border-gray-800">
-                            Follow </a>
-                    </div>
-
                 </div>
 
             </div>

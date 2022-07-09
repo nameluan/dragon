@@ -1,4 +1,7 @@
 @extends('user.index')
+@section('title')
+Reset
+@endsection
 @section('content')
 <div class="lg:p-12 max-w-md max-w-xl lg:my-0 my-12 mx-auto p-6 space-y-">
     <h1 class="lg:text-3xl text-xl font-semibold  mb-6"> Reset password</h1>

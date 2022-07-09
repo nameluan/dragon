@@ -118,7 +118,7 @@ class UserController extends Controller
                     [
                         "status"=>true,
                         "msg"=>"You have successfully registered, Login to access your dashboard",
-                        "redirect_location"=>url("user/login")
+                        "redirect_location"=>url("login")
                     ]
                 );
 
@@ -195,7 +195,7 @@ class UserController extends Controller
                     [
                         "status"=>true,
                         "msg"=>"You have successfully registered, Login to access your dashboard",
-                        "redirect_location"=>url("user/login")
+                        "redirect_location"=>url("login")
                     ]
                 );
             }

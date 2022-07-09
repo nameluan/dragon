@@ -56,7 +56,7 @@ Register
                 var erroJson = JSON.parse(response.responseText);
                 for (var err in erroJson) {
                     for (var errstr of erroJson[err])
-                        $("[name='" + err + "']").after("<div class='alert alert-danger'>" + errstr + "</div>");
+                        $("[name='" + err + "']").after("<div class='text-red-500'>" + errstr + "</div>");
                         $(e).find("[type='submit']").html("REGISTER");
                     }
             });
